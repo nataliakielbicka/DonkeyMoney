@@ -1,0 +1,17 @@
+<aura:component>
+
+    <aura:attribute name="expenses" type="Expense__c[]"/>
+
+		<lightning:layout>
+      <lightning:layoutItem padding="around-small" size="12">
+		    <lightning:card title="Spendings">
+	        <p class="slds-p-horizontal--small">
+            <aura:iteration items="{!v.expenses}" var="expense">
+              <c:spendingItem expense="{!expense}"/>
+            </aura:iteration>
+	        </p>
+		    </lightning:card>
+		  </lightning:layoutItem>
+		</lightning:layout>
+
+</aura:component>

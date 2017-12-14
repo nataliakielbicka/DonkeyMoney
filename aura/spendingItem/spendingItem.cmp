@@ -1,0 +1,18 @@
+<aura:component>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="formatdate" type="Date"/>
+    <aura:attribute name="expense" type="Expense__c"/>
+    
+    <lightning:card title="{!v.expense.Name}" iconName="standard:quotes">
+        <aura:set attribute="footer">
+            <p>Date: <lightning:formattedDateTime value="{!v.formatdate}"/></p>
+            <p class="slds-text-title"><lightning:relativeDateTime value="{!v.formatdate}"/></p>
+        </aura:set>
+        <p class="slds-text-heading--medium slds-p-horizontal--small">
+           Incomings: <lightning:formattedNumber value="{!v.expense.Amount__c}" style="currency"/>
+        </p>
+        <p class="slds-text-heading--medium slds-p-horizontal--small">
+            Spending: <lightning:formattedNumber value="{!v.expense.Spending__c}" style="currency"/>
+        </p>
+    </lightning:card>
+</aura:component>
