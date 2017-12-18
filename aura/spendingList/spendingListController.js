@@ -1,4 +1,5 @@
 ({
-	myAction : function(component, event, helper) {
-	}
+	deleteEvent : function(component, event, helper) {
+    helper.deleteExpense(component, event.getParam("expense"));
+  }
 })

@@ -1,13 +1,14 @@
 <aura:component>
 
     <aura:attribute name="expenses" type="Expense__c[]"/>
+    <aura:handler name="deleteExpenseItem" event="c:deleteExpenseItem" action="{!c.deleteEvent}" />
 
 		<lightning:layout>
       <lightning:layoutItem padding="around-small" size="12">
 		    <lightning:card title="Spendings">
 	        <p class="slds-p-horizontal--small">
             <aura:iteration items="{!v.expenses}" var="expense">
-              <c:spendingItem expense="{!expense}"/>
+              <c:spendingItem expense="{!expense}"/> <!--c:spendingItem is the sub-component -->
             </aura:iteration>
 	        </p>
 		    </lightning:card>

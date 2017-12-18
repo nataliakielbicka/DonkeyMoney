@@ -6,7 +6,8 @@
 	</types>
 	<types>
 		<members>ExpensesController</members>
-		<members>DeleteItem</members>
+		<members>deleteExpense</members>
+		<members>deleteExpenseItem</members>
 		<name>ApexClass</name>
 	</types>
 	<version>36.0</version>
